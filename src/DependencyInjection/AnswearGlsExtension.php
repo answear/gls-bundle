@@ -6,7 +6,6 @@ namespace Answear\GlsBundle\DependencyInjection;
 
 use Answear\GlsBundle\ConfigProvider;
 use Answear\GlsBundle\Logger\GlsLogger;
-use Psr\Log\NullLogger;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -35,21 +34,21 @@ class AnswearGlsExtension extends Extension implements PrependExtensionInterface
 
         $this->setConfig($container, $configs);
 
-        $this->setConfigProvider($container);
+        $this->setConfigProvider($container, $this->config['countryCode']);
         $this->setLogger($container);
     }
 
-    private function setConfigProvider(ContainerBuilder $container): void
+    private function setConfigProvider(ContainerBuilder $container, string $countryCode): void
     {
-        //$definition = $container->getDefinition(ConfigProvider::class);
-        //$definition->setArguments([$environment, $apiKey]);
+        $definition = $container->getDefinition(ConfigProvider::class);
+        $definition->setArguments([$countryCode]);
     }
 
     private function setLogger(ContainerBuilder $container): void
     {
         $definition = $container->getDefinition(GlsLogger::class);
         $definition->setArguments(
-            [$this->loggerDefinition ?? new NullLogger()]
+            [$this->loggerDefinition ?? null]
         );
     }
 

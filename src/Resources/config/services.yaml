@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Answear\GlsBundle\:
+        resource: '../../../src/{Client,Service,Serializer}'
+
+    Answear\GlsBundle\ConfigProvider: ~
+
+    Answear\GlsBundle\Logger\GlsLogger:
+        shared: false
+

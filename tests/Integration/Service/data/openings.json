@@ -1,0 +1,37 @@
+[
+    {
+        "day": "monday",
+        "open": "00:00-24:00",
+        "midbreak": ""
+    },
+    {
+        "day": "tuesday",
+        "open": "00:00-24:00",
+        "midbreak": ""
+    },
+    {
+        "day": "wednesday",
+        "open": "00:00-24:00",
+        "midbreak": ""
+    },
+    {
+        "day": "thursday",
+        "open": "00:00-24:00",
+        "midbreak": ""
+    },
+    {
+        "day": "friday",
+        "open": "00:00-24:00",
+        "midbreak": ""
+    },
+    {
+        "day": "saturday",
+        "open": "00:00-24:00",
+        "midbreak": ""
+    },
+    {
+        "day": "sunday",
+        "open": "00:00-24:00",
+        "midbreak": ""
+    }
+]

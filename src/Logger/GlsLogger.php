@@ -8,6 +8,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
 use Psr\Log\LoggerInterface;
+use Psr\Log\NullLogger;
 
 class GlsLogger
 {
@@ -19,16 +20,16 @@ class GlsLogger
     private LoggerInterface $logger;
     private ?string $requestId = null;
 
-    public function __construct(LoggerInterface $logger)
+    public function __construct(?LoggerInterface $logger)
     {
-        $this->logger = $logger;
+        $this->logger = $logger ?? new NullLogger();
     }
 
     public function logRequest(string $endpoint, RequestInterface $request): void
     {
         try {
             $this->logger->info(
-                $this->decorateMessage('Request', $endpoint),
+                $this->decorateMessage('Request', $request->getUri()),
                 [
                     'glsRequestId' => $this->requestId,
                     'endpoint' => $endpoint,
@@ -38,7 +39,7 @@ class GlsLogger
             );
         } catch (\Throwable $t) {
             $this->logger->error(
-                $this->decorateMessage('Cannot log request', $endpoint),
+                $this->decorateMessage('Cannot log request', $request->getUri()),
                 ['exception' => $t]
             );
         }
@@ -48,7 +49,7 @@ class GlsLogger
     {
         try {
             $this->logger->info(
-                $this->decorateMessage('Response', $endpoint),
+                $this->decorateMessage('Response', $request->getUri()),
                 [
                     'endpoint' => $endpoint,
                     'glsRequestId' => $this->requestId,
@@ -58,7 +59,7 @@ class GlsLogger
             );
         } catch (\Throwable $t) {
             $this->logger->error(
-                $this->decorateMessage('Cannot log response', $endpoint),
+                $this->decorateMessage('Cannot log response', $request->getUri()),
                 ['exception' => $t]
             );
         }
@@ -67,7 +68,7 @@ class GlsLogger
     public function logError(string $endpoint, \Throwable $t): void
     {
         $this->logger->error(
-            $this->decorateMessage('Exception', $endpoint),
+            $this->decorateMessage('Unexpected exception', null),
             [
                 'endpoint' => $endpoint,
                 'glsRequestId' => $this->requestId,
@@ -86,9 +87,9 @@ class GlsLogger
         $this->requestId = null;
     }
 
-    private function decorateMessage(string $message, string $endpoint): string
+    private function decorateMessage(string $message, ?UriInterface $uri): string
     {
-        return self::MESSAGE_PREFIX . $message . ' - ' . $endpoint;
+        return self::MESSAGE_PREFIX . $message . ' - ' . (null !== $uri ? $uri->getPath() . '?' . $uri->getQuery() : '');
     }
 
     private function getParsedContent(string $content)

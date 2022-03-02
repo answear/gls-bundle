@@ -15,16 +15,31 @@ should be added automatically to your `config/bundles.php` file by Symfony Flex.
 
 ## Setup
 
-//TODO
+* provide required config data: `countryCode`
+
+```yaml
+# config/packages/answear_gls.yaml
+answear_gls:
+    countryCode: HU|SK|CZ|RO|SI|HR
+    logger: yourCustomLoggerService #default: null
+```
+
+Logger service must implement `Psr\Log\LoggerInterface` interface.
 
 ## Usage
 
-//TODO
+### Get ParcelShops
+
+```php
+/** @var \Answear\GlsBundle\Service\ParcelShopsService $parcelShopService **/
+$parcelShopService->getParcelShopCollection();
+```
+
+will return `\Answear\GlsBundle\Response\DTO\ParcelShop[]` array.
 
 ### Error handling
 
 - `Answear\GlsBundle\Exception\ServiceUnavailableException` for all `GuzzleException`
-- `nswear\GlsBundle\Exception\MalformedResponseException` for partner other errors
 
 Final notes
 ------------
