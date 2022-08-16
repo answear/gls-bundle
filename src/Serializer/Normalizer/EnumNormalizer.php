@@ -23,12 +23,12 @@ class EnumNormalizer implements NormalizerInterface, DenormalizerInterface
         return $object->getValue();
     }
 
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null, array $context = []): bool
     {
         return $data instanceof Enum;
     }
 
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
         try {
             $type::get($data);
