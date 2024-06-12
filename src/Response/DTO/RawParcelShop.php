@@ -16,12 +16,12 @@ class RawParcelShop
     public ?string $phone;
     public ?string $email;
     public ?string $iscodhandler;
-    public string $paybybankcard;
-    public string $dropoffpoint;
+    public ?string $paybybankcard;
+    public ?string $dropoffpoint;
     public string $geolat;
     public string $geolng;
     public string $owner;
-    public string $isparcellocker;
+    public ?string $isparcellocker;
     public ?string $vendor_url;
     public ?string $pcl_pickup_time;
     public ?string $info;
