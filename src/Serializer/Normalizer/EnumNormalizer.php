@@ -11,6 +11,11 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 class EnumNormalizer implements NormalizerInterface, DenormalizerInterface
 {
+    public function getSupportedTypes(?string $format): array
+    {
+        return [Enum::class => true];
+    }
+
     /**
      * @return array|string|int|float|bool|\ArrayObject|null
      */
@@ -40,9 +45,9 @@ class EnumNormalizer implements NormalizerInterface, DenormalizerInterface
     }
 
     /**
-     * @see Enum for $type
-     *
      * @return array|string|int|float|bool|\ArrayObject|null
+     *
+     * @see Enum for $type
      */
     public function denormalize($data, $type, $format = null, array $context = [])
     {
