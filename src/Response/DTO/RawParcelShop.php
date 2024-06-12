@@ -15,7 +15,7 @@ class RawParcelShop
     public ?string $contact;
     public ?string $phone;
     public ?string $email;
-    public string $iscodhandler;
+    public ?string $iscodhandler;
     public string $paybybankcard;
     public string $dropoffpoint;
     public string $geolat;

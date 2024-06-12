@@ -495,7 +495,7 @@
         "contact": null,
         "phone": "01\/520-81-20",
         "email": "Station.Ljubljana.Litijska@omv.com",
-        "iscodhandler": "t",
+        "iscodhandler": null,
         "paybybankcard": "t",
         "dropoffpoint": "f",
         "geolat": "46.0473",

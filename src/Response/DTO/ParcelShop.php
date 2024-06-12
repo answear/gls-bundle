@@ -74,7 +74,7 @@ class ParcelShop
             $rawParcelShop->pclshopid,
             $rawParcelShop->name,
             CountryCode::byValue($rawParcelShop->ctrcode),
-            BooleanTransformer::transformToBoolean($rawParcelShop->iscodhandler),
+            null === $rawParcelShop->iscodhandler ? false : BooleanTransformer::transformToBoolean($rawParcelShop->iscodhandler),
             BooleanTransformer::transformToBoolean($rawParcelShop->paybybankcard),
             BooleanTransformer::transformToBoolean($rawParcelShop->dropoffpoint),
             $rawParcelShop->owner,

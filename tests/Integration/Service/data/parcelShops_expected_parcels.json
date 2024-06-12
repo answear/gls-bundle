@@ -1347,7 +1347,7 @@
         "shopId": "1000-OMV04",
         "name": "PS OMV LJUBLJANA LITIJSKA",
         "countryCode": "SI",
-        "isCodHandler": true,
+        "isCodHandler": false,
         "payByBankCard": true,
         "dropOffPoint": false,
         "owner": "GLS",
