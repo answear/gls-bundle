@@ -113,7 +113,7 @@ class ParcelShopsTest extends TestCase
                     'email' => $address->getEmail(),
                 ],
                 'openings' => $actualOpenings,
-                'coordinates' => [
+                'coordinates' => null === $parcelShop->getCoordinates() ? null : [
                     'latitude' => $parcelShop->getCoordinates()->latitude,
                     'longitude' => $parcelShop->getCoordinates()->longitude,
                 ],
@@ -134,6 +134,7 @@ class ParcelShopsTest extends TestCase
             '[GLS_BUNDLE] Request - /psmap/psmap_getdata.php?action=getList&ctrcode=SI&pclshopin=1&parcellockin=1',
             '[GLS_BUNDLE] Response - /psmap/psmap_getdata.php?action=getList&ctrcode=SI&pclshopin=1&parcellockin=1',
         ];
+
         foreach ($parcelShops as $parcelShop) {
             $expected[] = '[GLS_BUNDLE] Request - /psmap/psmap_getdata.php?action=getOpenings&pclshopid=' . $parcelShop['pclshopid'];
             $expected[] = '[GLS_BUNDLE] Response - /psmap/psmap_getdata.php?action=getOpenings&pclshopid=' . $parcelShop['pclshopid'];

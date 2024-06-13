@@ -25,7 +25,7 @@ class ParcelShop
      * @var Openings[]
      */
     private array $openings = [];
-    private Coordinates $coordinates;
+    private ?Coordinates $coordinates;
     private ?string $holidayStarts;
     private ?string $holidayEnds;
 
@@ -43,7 +43,7 @@ class ParcelShop
         ?string $info,
         Address $address,
         array $openings,
-        Coordinates $coordinates,
+        ?Coordinates $coordinates,
         ?string $holidayStarts,
         ?string $holidayEnds
     ) {
@@ -70,6 +70,12 @@ class ParcelShop
      */
     public static function fromRawParcelShop(RawParcelShop $rawParcelShop, array $openings): self
     {
+        $coordinates = null;
+
+        if (null !== $rawParcelShop->geolat && null !== $rawParcelShop->geolng) {
+            $coordinates = new Coordinates((float) $rawParcelShop->geolat, (float) $rawParcelShop->geolng);
+        }
+
         return new self(
             $rawParcelShop->pclshopid,
             $rawParcelShop->name,
@@ -84,7 +90,7 @@ class ParcelShop
             $rawParcelShop->info,
             Address::fromRawParcelShop($rawParcelShop),
             $openings,
-            new Coordinates((float) $rawParcelShop->geolat, (float) $rawParcelShop->geolng),
+            $coordinates,
             $rawParcelShop->holidaystarts,
             $rawParcelShop->holidayends
         );
@@ -158,7 +164,7 @@ class ParcelShop
         return $this->openings;
     }
 
-    public function getCoordinates(): Coordinates
+    public function getCoordinates(): ?Coordinates
     {
         return $this->coordinates;
     }
