@@ -18,8 +18,8 @@ class RawParcelShop
     public ?string $iscodhandler;
     public ?string $paybybankcard;
     public ?string $dropoffpoint;
-    public string $geolat;
-    public string $geolng;
+    public ?string $geolat;
+    public ?string $geolng;
     public string $owner;
     public ?string $isparcellocker;
     public ?string $vendor_url;

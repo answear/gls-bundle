@@ -1344,24 +1344,24 @@
         "holidayEnds": null
     },
     {
-        "shopId": "1000-OMV04",
-        "name": "PS OMV LJUBLJANA LITIJSKA",
+        "shopId": "6000-OMV01",
+        "name": "OMV SLOVENIJA D.O.O.",
         "countryCode": "SI",
-        "isCodHandler": false,
-        "payByBankCard": false,
-        "dropOffPoint": false,
+        "isCodHandler": true,
+        "payByBankCard": true,
+        "dropOffPoint": true,
         "owner": "GLS",
         "isParcelLocker": false,
         "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
-            "zipCode": "1000",
-            "city": "LJUBLJANA",
-            "place": "Litijska cesta 40",
+            "zipCode": "6000",
+            "city": "KOPER",
+            "place": "Istrska cesta 53",
             "contact": null,
-            "phone": "01\/520-81-20",
-            "email": "Station.Ljubljana.Litijska@omv.com"
+            "phone": null,
+            "email": null
         },
         "openings": [
             {
@@ -1401,9 +1401,70 @@
             }
         ],
         "coordinates": {
-            "latitude": 46.0473,
-            "longitude": 14.5463
+            "latitude": 45.539,
+            "longitude": 13.7287
         },
+        "holidayStarts": null,
+        "holidayEnds": null
+    },
+    {
+        "shopId": "1000-OMV04",
+        "name": "PS OMV LJUBLJANA LITIJSKA",
+        "countryCode": "SI",
+        "isCodHandler": false,
+        "payByBankCard": false,
+        "dropOffPoint": false,
+        "owner": "GLS",
+        "isParcelLocker": false,
+        "vendorUrl": null,
+        "pickupTime": null,
+        "info": null,
+        "address": {
+            "zipCode": "1000",
+            "city": "LJUBLJANA",
+            "place": "Litijska cesta 40",
+            "contact": null,
+            "phone": null,
+            "email": null
+        },
+        "openings": [
+            {
+                "day": "monday",
+                "open": "00:00-24:00",
+                "midbreak": ""
+            },
+            {
+                "day": "tuesday",
+                "open": "00:00-24:00",
+                "midbreak": ""
+            },
+            {
+                "day": "wednesday",
+                "open": "00:00-24:00",
+                "midbreak": ""
+            },
+            {
+                "day": "thursday",
+                "open": "00:00-24:00",
+                "midbreak": ""
+            },
+            {
+                "day": "friday",
+                "open": "00:00-24:00",
+                "midbreak": ""
+            },
+            {
+                "day": "saturday",
+                "open": "00:00-24:00",
+                "midbreak": ""
+            },
+            {
+                "day": "sunday",
+                "open": "00:00-24:00",
+                "midbreak": ""
+            }
+        ],
+        "coordinates": null,
         "holidayStarts": null,
         "holidayEnds": null
     }

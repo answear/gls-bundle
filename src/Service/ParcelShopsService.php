@@ -49,7 +49,11 @@ class ParcelShopsService
 
         $parcelShopCollection = [];
         foreach ($rawParcelShopCollection as $rawParcelShop) {
-            $openings = $this->getOpenings($rawParcelShop->pclshopid);
+            try {
+                $openings = $this->getOpenings($rawParcelShop->pclshopid);
+            } catch (\Throwable $throwable) {
+                $openings = [];
+            }
 
             $parcelShop = ParcelShop::fromRawParcelShop($rawParcelShop, $openings);
             $parcelShopCollection[] = $parcelShop;
