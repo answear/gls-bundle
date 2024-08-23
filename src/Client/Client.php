@@ -13,6 +13,9 @@ use Psr\Http\Message\ResponseInterface;
 
 class Client
 {
+    private const CONNECTION_TIMEOUT = 10;
+    private const TIMEOUT = 30;
+
     private ClientInterface $client;
     private RequestTransformer $transformer;
     private GlsLogger $glsLogger;
@@ -24,7 +27,7 @@ class Client
     ) {
         $this->transformer = $transformer;
         $this->glsLogger = $glsLogger;
-        $this->client = $client ?? new \GuzzleHttp\Client();
+        $this->client = $client ?? new \GuzzleHttp\Client(['timeout' => self::TIMEOUT, 'connect_timeout' => self::CONNECTION_TIMEOUT]);
     }
 
     public function request(RequestInterface $request): ResponseInterface
