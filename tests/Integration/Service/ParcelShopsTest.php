@@ -7,14 +7,17 @@ namespace Answear\GlsBundle\Tests\Integration\Service;
 use Answear\GlsBundle\Client\Client;
 use Answear\GlsBundle\Client\RequestTransformer;
 use Answear\GlsBundle\ConfigProvider;
-use Answear\GlsBundle\Enum\CountryCode;
+use Answear\GlsBundle\Enum\CountryCodeEnum;
+use Answear\GlsBundle\Enum\FeatureEnum;
 use Answear\GlsBundle\Logger\GlsLogger;
+use Answear\GlsBundle\Response\DTO\Openings;
 use Answear\GlsBundle\Response\DTO\ParcelShop;
 use Answear\GlsBundle\Serializer\Serializer;
 use Answear\GlsBundle\Service\ParcelShopsService;
 use Answear\GlsBundle\Tests\MockGuzzleTrait;
 use Answear\GlsBundle\Tests\Util\FileTestUtil;
 use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
@@ -32,12 +35,10 @@ class ParcelShopsTest extends TestCase
         parent::setUp();
 
         $this->serializer = new Serializer();
-        $this->configProvider = new ConfigProvider(CountryCode::slovenia()->getValue());
+        $this->configProvider = new ConfigProvider(CountryCodeEnum::Slovenia->value);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function successfulGetParcelShop(): void
     {
         $parcelShops = FileTestUtil::decodeJsonFromFile(__DIR__ . '/data/parcelShops.json');
@@ -47,11 +48,6 @@ class ParcelShopsTest extends TestCase
         $this->mockGuzzleResponse(
             new Response(200, [], FileTestUtil::getFileContents(__DIR__ . '/data/parcelShops.json'))
         );
-        foreach ($parcelShops as $element) {
-            $this->mockGuzzleResponse(
-                new Response(200, [], FileTestUtil::getFileContents(__DIR__ . '/data/openings.json'))
-            );
-        }
 
         $this->assertOfficeSame($service->getParcelShopCollection());
     }
@@ -61,9 +57,9 @@ class ParcelShopsTest extends TestCase
         return new Client(
             new RequestTransformer(
                 $this->serializer,
-                new ConfigProvider(CountryCode::slovenia()->getValue())
+                new ConfigProvider(CountryCodeEnum::Slovenia->value)
             ),
-            new GlsLogger($withLogger ? $this->getLogger($parcelShops) : new NullLogger()),
+            new GlsLogger($withLogger ? $this->getLogger() : new NullLogger()),
             $this->setupGuzzleClient()
         );
     }
@@ -80,45 +76,50 @@ class ParcelShopsTest extends TestCase
     {
         $actualData = [];
         foreach ($parcelShops as $parcelShop) {
-            $address = $parcelShop->getAddress();
-            $openings = $parcelShop->getOpenings();
+            $openings = array_map(
+                static function (Openings $opening) {
+                    return [
+                        'number' => $opening->number,
+                        'day' => $opening->day->value,
+                        'openTime' => $opening->openTime,
+                        'closeTime' => $opening->closeTime,
+                        'breakStart' => $opening->breakStart,
+                        'breakEnd' => $opening->breakEnd,
+                    ];
+                },
+                $parcelShop->openings
+            );
 
-            $actualOpenings = [];
-            foreach ($openings as $opening) {
-                $actualOpenings[] = [
-                    'day' => $opening->getDay()->getValue(),
-                    'open' => $opening->getOpen(),
-                    'midbreak' => $opening->getMidbreak(),
-                ];
-            }
+            $features = array_map(
+                static function (FeatureEnum $feature) {
+                    return $feature->value;
+                },
+                $parcelShop->features,
+            );
 
             $actualData[] = [
-                'shopId' => $parcelShop->getShopId(),
-                'name' => $parcelShop->getName(),
-                'countryCode' => $parcelShop->getCountryCode()->getValue(),
-                'isCodHandler' => $parcelShop->isCodHandler(),
-                'payByBankCard' => $parcelShop->hasPayByBankCard(),
-                'dropOffPoint' => $parcelShop->isDropOffPoint(),
-                'owner' => $parcelShop->getOwner(),
-                'isParcelLocker' => $parcelShop->isParcelLocker(),
-                'vendorUrl' => $parcelShop->getVendorUrl(),
-                'pickupTime' => $parcelShop->getPickupTime(),
-                'info' => $parcelShop->getInfo(),
+                'shopId' => $parcelShop->shopId,
+                'name' => $parcelShop->name,
+                'countryCode' => $parcelShop->countryCode->value,
+                'isCodHandler' => $parcelShop->isCodHandler,
+                'payByBankCard' => $parcelShop->payByBankCard,
+                'isParcelLocker' => $parcelShop->isParcelLocker,
+                'pickupTime' => $parcelShop->pickupTime,
+                'info' => $parcelShop->info,
                 'address' => [
-                    'zipCode' => $address->getZipCode(),
-                    'city' => $address->getCity(),
-                    'place' => $address->getPlace(),
-                    'contact' => $address->getContact(),
-                    'phone' => $address->getPhone(),
-                    'email' => $address->getEmail(),
+                    'zipCode' => $parcelShop->address->zipCode,
+                    'city' => $parcelShop->address->city,
+                    'place' => $parcelShop->address->place,
+                    'phone' => $parcelShop->address->phone,
+                    'email' => $parcelShop->address->email,
+                    'web' => $parcelShop->address->web,
                 ],
-                'openings' => $actualOpenings,
-                'coordinates' => null === $parcelShop->getCoordinates() ? null : [
-                    'latitude' => $parcelShop->getCoordinates()->latitude,
-                    'longitude' => $parcelShop->getCoordinates()->longitude,
+                'openings' => $openings,
+                'coordinates' => [
+                    'latitude' => $parcelShop->coordinates->latitude,
+                    'longitude' => $parcelShop->coordinates->longitude,
                 ],
-                'holidayStarts' => $parcelShop->getHolidayEnds(),
-                'holidayEnds' => $parcelShop->getHolidayEnds(),
+                'features' => $features,
             ];
         }
 
@@ -128,17 +129,12 @@ class ParcelShopsTest extends TestCase
         );
     }
 
-    private function getLogger(array $parcelShops = []): LoggerInterface
+    private function getLogger(): LoggerInterface
     {
         $expected = [
-            '[GLS_BUNDLE] Request - /psmap/psmap_getdata.php?action=getList&ctrcode=SI&pclshopin=1&parcellockin=1',
-            '[GLS_BUNDLE] Response - /psmap/psmap_getdata.php?action=getList&ctrcode=SI&pclshopin=1&parcellockin=1',
+            '[GLS_BUNDLE] Request - /data/deliveryPoints/si.json',
+            '[GLS_BUNDLE] Response - /data/deliveryPoints/si.json',
         ];
-
-        foreach ($parcelShops as $parcelShop) {
-            $expected[] = '[GLS_BUNDLE] Request - /psmap/psmap_getdata.php?action=getOpenings&pclshopid=' . $parcelShop['pclshopid'];
-            $expected[] = '[GLS_BUNDLE] Response - /psmap/psmap_getdata.php?action=getOpenings&pclshopid=' . $parcelShop['pclshopid'];
-        }
 
         $invalidMessages = [];
         $logger = $this->createMock(LoggerInterface::class);

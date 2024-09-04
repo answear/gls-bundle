@@ -1,531 +1,898 @@
-[
-    {
-        "pclshopid": "1000-PETROL08",
-        "name": "BS LJUBLJANA - ZALO\u0160KA",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "ZALO\u0160KA CESTA 60A",
-        "contact": null,
-        "phone": "01 54 21 140",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0559",
-        "geolng": "14.5389",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL20",
-        "name": "BS LJUBLJANA AC - BARJE SEVER",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "CESTA DVEH CESARJEV 71",
-        "contact": null,
-        "phone": "01 42 36 530",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0291",
-        "geolng": "14.4817",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-DELO06",
-        "name": "DELO PRODAJA , D.D.",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "Ljubljana",
-        "address": "Dunajska 107",
-        "contact": null,
-        "phone": null,
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "f",
-        "dropoffpoint": "f",
-        "geolat": "46.0744",
-        "geolng": "14.5109",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-NOGROUPGRP",
-        "name": "TEST PS",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "Cesta v Prod 84",
-        "contact": "TT",
-        "phone": "015001150",
-        "email": "it@gls-slovenia.com",
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "f",
-        "geolat": "46.0739",
-        "geolng": "14.6088",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL27",
-        "name": "BS LJUBLJANA - BARJANSAKA CESTA",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "BARJANSKA CESTA 90",
-        "contact": null,
-        "phone": null,
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.034",
-        "geolng": "14.5002",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PARCELLOCK16",
-        "name": "PAKETOMAT BS Petrol Trnovo",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "Riharjeva ulica 31, Petrol",
-        "contact": null,
-        "phone": "01 500 11 50",
-        "email": "info@gls-slovenia.com",
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0392",
-        "geolng": "14.5",
-        "owner": "GLS",
-        "isparcellocker": "t",
-        "vendor_url": null,
-        "pcl_pickup_time": null,
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL01",
-        "name": "Testna paketna trgovina",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "Samo za namen testranja",
-        "contact": "NI AKTIVEN",
-        "phone": null,
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "f",
-        "geolat": "46.0569",
-        "geolng": "14.5058",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "11:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL26",
-        "name": "BS LJUBLJANA - KAJUHOVA",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "KAJUHOVA ULICA 32S",
-        "contact": null,
-        "phone": "01 54 43 961",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0615",
-        "geolng": "14.5382",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL23",
-        "name": "BS LJUBLJANA - \u010cRNU\u010cE, \u0160TAJERSKA",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "\u0160TAJERSKA CESTA 10",
-        "contact": null,
-        "phone": "01 56 35 610",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.1058",
-        "geolng": "14.5451",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL05",
-        "name": "BS LJUBLJANA - DUNAJSKA 130",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "DUNAJSKA CESTA 130",
-        "contact": null,
-        "phone": "01 56 53 490",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0781",
-        "geolng": "14.5126",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL21",
-        "name": "BS LJUBLJANA AC - BARJE JUG",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "CESTA DVEH CESARJEV 73",
-        "contact": null,
-        "phone": "01 42 36 540",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0288",
-        "geolng": "14.4784",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL19",
-        "name": "BS LJUBLJANA - RUDNIK ZAHOD",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "DOLENJSKA CESTA 242F",
-        "contact": null,
-        "phone": "01 42 12 670",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0197",
-        "geolng": "14.5423",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL18",
-        "name": "BS LJUBLJANA - DUNAJSKA 70",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "DUNAJSKA CESTA 70",
-        "contact": null,
-        "phone": "01 43 64 770",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.069",
-        "geolng": "14.511",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-TRAFIKADVA10",
-        "name": "PS 3DVA LJUBLJANA AJDOV\u0160\u010cINA PODHOD",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "Ajdov\u0161\u010dina 1 - PODHOD",
-        "contact": null,
-        "phone": "051 282-735",
-        "email": "703401@trafika3dva.si",
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "f",
-        "geolat": "46.0538",
-        "geolng": "14.5046",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-PETROL17",
-        "name": "BS LJUBLJANA - TRNOVO",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "RIHARJEVA ULICA 31",
-        "contact": null,
-        "phone": "01 42 92 380",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.0393",
-        "geolng": "14.5",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "6000-PARCELLOCK01",
-        "name": "PAKETOMAT OMV BERTOKI",
-        "ctrcode": "SI",
-        "zipcode": "6000",
-        "city": "Koper",
-        "address": "Cesta med vinogradi 52",
-        "contact": null,
-        "phone": "01 500 11 50",
-        "email": "INFO@GLS-SLOVENIA.COM",
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "45.5554",
-        "geolng": "13.7809",
-        "owner": "GLS",
-        "isparcellocker": "t",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "9000-PETROL03",
-        "name": "BS MURSKA SOBOTA - PLESE",
-        "ctrcode": "SI",
-        "zipcode": "9000",
-        "city": "MURSKA SOBOTA",
-        "address": "PANONSKA ULICA 5",
-        "contact": null,
-        "phone": "02 522 10 05",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.6565",
-        "geolng": "16.1714",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "9000-OMV",
-        "name": "OMV SLOVENIJA D.O.O.",
-        "ctrcode": "SI",
-        "zipcode": "9000",
-        "city": "MURSKA SOBOTA",
-        "address": "Lendavska 60d",
-        "contact": null,
-        "phone": null,
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.6668",
-        "geolng": "16.177",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "9000-TRAFIKADVA02",
-        "name": "TRAFIKA 3DVA D.O.O.",
-        "ctrcode": "SI",
-        "zipcode": "9000",
-        "city": "MURSKA SOBOTA",
-        "address": "Kocljeva 3, Tr\u017enica",
-        "contact": null,
-        "phone": "051 282-634",
-        "email": "701201@trafika3dva.si",
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.6604",
-        "geolng": "16.1644",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "9000-PETROL02",
-        "name": "BS MURSKA SOBOTA AC - JUG",
-        "ctrcode": "SI",
-        "zipcode": "9000",
-        "city": "MURSKA SOBOTA",
-        "address": "BAKOVSKA ULICA 51",
-        "contact": null,
-        "phone": "02 53 71 215",
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "46.6345",
-        "geolng": "16.1641",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": "10:00",
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "6000-OMV01",
-        "name": "OMV SLOVENIJA D.O.O.",
-        "ctrcode": "SI",
-        "zipcode": "6000",
-        "city": "KOPER",
-        "address": "Istrska cesta 53",
-        "contact": null,
-        "phone": null,
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "45.539",
-        "geolng": "13.7287",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": null,
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "6000-OMV01",
-        "name": "OMV SLOVENIJA D.O.O.",
-        "ctrcode": "SI",
-        "zipcode": "6000",
-        "city": "KOPER",
-        "address": "Istrska cesta 53",
-        "contact": null,
-        "phone": null,
-        "email": null,
-        "iscodhandler": "t",
-        "paybybankcard": "t",
-        "dropoffpoint": "t",
-        "geolat": "45.539",
-        "geolng": "13.7287",
-        "owner": "GLS",
-        "isparcellocker": "f",
-        "vendor_url": null,
-        "pcl_pickup_time": null,
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    },
-    {
-        "pclshopid": "1000-OMV04",
-        "name": "PS OMV LJUBLJANA LITIJSKA",
-        "ctrcode": "SI",
-        "zipcode": "1000",
-        "city": "LJUBLJANA",
-        "address": "Litijska cesta 40",
-        "contact": null,
-        "phone": null,
-        "email": null,
-        "iscodhandler": null,
-        "paybybankcard": null,
-        "dropoffpoint": null,
-        "geolat": null,
-        "geolng": null,
-        "owner": "GLS",
-        "isparcellocker": null,
-        "vendor_url": null,
-        "pcl_pickup_time": null,
-        "info": null,
-        "holidaystarts": null,
-        "holidayends": null
-    }
-]
+{
+    "items": [
+        {
+            "id": "1000-PETROL08",
+            "goldId": 4192,
+            "name": "BS LJUBLJANA - ZALOŠKA",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "ZALOŠKA CESTA 60A",
+                "phone": "01 54 21 140",
+                "web": null
+            },
+            "location": [
+                46.0559,
+                14.5389
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery",
+                "aa"
+            ],
+            "pickupTime": "10:00",
+            "type": "parcel-shop",
+            "externalId": "104192"
+        },
+        {
+            "id": "1000-PETROL20",
+            "goldId": 4204,
+            "name": "BS LJUBLJANA AC - BARJE SEVER",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "CESTA DVEH CESARJEV 71"
+            },
+            "location": [
+                46.0291,
+                14.4817
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "pickupTime": "10:00",
+            "type": "parcel-shop",
+            "externalId": "104204"
+        },
+        {
+            "id": "1000-PETROL27",
+            "goldId": 4211,
+            "name": "BS LJUBLJANA - BARJANSAKA CESTA",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "BARJANSKA CESTA 90"
+            },
+            "location": [
+                46.034,
+                14.5002
+            ],
+            "hours": [
+                [
+                    1,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    2,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    3,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    4,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    5,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    6,
+                    "07:00",
+                    "21:00"
+                ],
+                [
+                    7,
+                    "07:00",
+                    "21:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "pickupTime": "10:00",
+            "type": "parcel-shop",
+            "externalId": "104211"
+        },
+        {
+            "id": "1000-PARCELLOCK16",
+            "goldId": 3790,
+            "name": "PAKETOMAT BS Petrol Trnovo",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "Riharjeva ulica 31, Petrol"
+            },
+            "location": [
+                46.0392,
+                14.5
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCard",
+                "pickup",
+                "delivery"
+            ],
+            "type": "parcel-locker",
+            "externalId": "103790"
+        },
+        {
+            "id": "1000-PETROL26",
+            "goldId": 4210,
+            "name": "BS LJUBLJANA - KAJUHOVA",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "KAJUHOVA ULICA 32S",
+                "email": "kajuhova@kajuhova.com"
+            },
+            "location": [
+                46.0615,
+                14.5382
+            ],
+            "hours": [
+                [
+                    1,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    2,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    3,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    4,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    5,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    6,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    7,
+                    "08:00",
+                    "20:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "type": "parcel-shop",
+            "externalId": "104210"
+        },
+        {
+            "id": "1000-PETROL23",
+            "goldId": 4207,
+            "name": "BS LJUBLJANA - ČRNUČE, ŠTAJERSKA",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "ŠTAJERSKA CESTA 10"
+            },
+            "location": [
+                46.1058,
+                14.5451
+            ],
+            "hours": [
+                [
+                    1,
+                    "06:00",
+                    "23:00"
+                ],
+                [
+                    2,
+                    "06:00",
+                    "23:00"
+                ],
+                [
+                    3,
+                    "06:00",
+                    "23:00"
+                ],
+                [
+                    4,
+                    "06:00",
+                    "23:00"
+                ],
+                [
+                    5,
+                    "06:00",
+                    "23:00"
+                ],
+                [
+                    6,
+                    "06:00",
+                    "23:00"
+                ],
+                [
+                    7,
+                    "08:00",
+                    "22:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "type": "parcel-shop",
+            "externalId": "104207"
+        },
+        {
+            "id": "1000-PETROL05",
+            "goldId": 4189,
+            "name": "BS LJUBLJANA - DUNAJSKA 130",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "DUNAJSKA CESTA 130"
+            },
+            "location": [
+                46.0781,
+                14.5126
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "type": "parcel-shop",
+            "externalId": "104189"
+        },
+        {
+            "id": "1000-PETROL21",
+            "goldId": 4205,
+            "name": "BS LJUBLJANA AC - BARJE JUG",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "CESTA DVEH CESARJEV 73"
+            },
+            "location": [
+                46.0288,
+                14.4784
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "type": "parcel-shop",
+            "externalId": "104205"
+        },
+        {
+            "id": "1000-PETROL19",
+            "goldId": 4203,
+            "name": "BS LJUBLJANA - RUDNIK ZAHOD",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "DOLENJSKA CESTA 242F"
+            },
+            "location": [
+                46.0197,
+                14.5423
+            ],
+            "hours": [
+                [
+                    1,
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    2,
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    3,
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    4,
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    5,
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    6,
+                    "06:00",
+                    "19:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "type": "parcel-shop",
+            "externalId": "104203"
+        },
+        {
+            "id": "1000-PETROL18",
+            "goldId": 4202,
+            "name": "BS LJUBLJANA - DUNAJSKA 70",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "DUNAJSKA CESTA 70"
+            },
+            "location": [
+                46.069,
+                14.511
+            ],
+            "hours": [
+                [
+                    1,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    2,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    3,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    4,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    5,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    6,
+                    "06:00",
+                    "22:00"
+                ],
+                [
+                    7,
+                    "07:00",
+                    "22:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "pickupTime": "10:00",
+            "type": "parcel-shop",
+            "externalId": "104202"
+        },
+        {
+            "id": "1000-TRAFIKADVA10",
+            "goldId": 4624,
+            "name": "PS 3DVA LJUBLJANA AJDOVŠČINA PODHOD",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "Ajdovščina 1 - PODHOD"
+            },
+            "location": [
+                46.0538,
+                14.5046
+            ],
+            "hours": [],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "pickupTime": "10:00",
+            "type": "parcel-shop",
+            "externalId": "104624"
+        },
+        {
+            "id": "1000-PETROL17",
+            "goldId": 4201,
+            "name": "BS LJUBLJANA - TRNOVO",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "1000",
+                "city": "LJUBLJANA",
+                "address": "RIHARJEVA ULICA 31"
+            },
+            "location": [
+                46.0393,
+                14.5
+            ],
+            "hours": [
+                [
+                    1,
+                    "06:00",
+                    "20:00"
+                ],
+                [
+                    2,
+                    "06:00",
+                    "20:00"
+                ],
+                [
+                    3,
+                    "06:00",
+                    "20:00"
+                ],
+                [
+                    4,
+                    "06:00",
+                    "20:00"
+                ],
+                [
+                    5,
+                    "06:00",
+                    "20:00"
+                ],
+                [
+                    6,
+                    "06:00",
+                    "13:00"
+                ]
+            ],
+            "features": [],
+            "type": "parcel-shop",
+            "externalId": "104201"
+        },
+        {
+            "id": "6000-PARCELLOCK01",
+            "goldId": 3750,
+            "name": "PAKETOMAT OMV BERTOKI",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "6000",
+                "city": "Koper",
+                "address": "Cesta med vinogradi 52"
+            },
+            "location": [
+                45.5554,
+                13.7809
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCard",
+                "pickup",
+                "delivery"
+            ],
+            "type": "parcel-locker",
+            "externalId": "103750"
+        },
+        {
+            "id": "9000-PETROL03",
+            "goldId": 4483,
+            "name": "BS MURSKA SOBOTA - PLESE",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "9000",
+                "city": "MURSKA SOBOTA",
+                "address": "PANONSKA ULICA 5"
+            },
+            "location": [
+                46.6565,
+                16.1714
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "type": "parcel-shop",
+            "externalId": "104483"
+        },
+        {
+            "id": "9000-TRAFIKADVA02",
+            "goldId": 4720,
+            "name": "TRAFIKA 3DVA D.O.O.",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "9000",
+                "city": "MURSKA SOBOTA",
+                "address": "Kocljeva 3, Tržnica"
+            },
+            "location": [
+                46.6604,
+                16.1644
+            ],
+            "hours": [
+                [
+                    1,
+                    "06:00",
+                    "19:30"
+                ],
+                [
+                    2,
+                    "06:00",
+                    "19:30"
+                ],
+                [
+                    3,
+                    "06:00",
+                    "19:30"
+                ],
+                [
+                    4,
+                    "06:00",
+                    "19:30"
+                ],
+                [
+                    5,
+                    "06:00",
+                    "19:30"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "type": "parcel-shop",
+            "externalId": "104720"
+        },
+        {
+            "id": "9000-PETROL02",
+            "goldId": 4482,
+            "name": "BS MURSKA SOBOTA AC - JUG",
+            "contact": {
+                "countryCode": "SI",
+                "postalCode": "9000",
+                "city": "MURSKA SOBOTA",
+                "address": "BAKOVSKA ULICA 51"
+            },
+            "location": [
+                46.6345,
+                16.1641
+            ],
+            "hours": [
+                [
+                    1,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    2,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    3,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    4,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    5,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    6,
+                    "00:00",
+                    "24:00"
+                ],
+                [
+                    7,
+                    "00:00",
+                    "24:00"
+                ]
+            ],
+            "features": [
+                "acceptsCash",
+                "acceptsCard",
+                "delivery"
+            ],
+            "pickupTime": "10:00",
+            "type": "parcel-shop",
+            "externalId": "104482"
+        }
+    ]
+}

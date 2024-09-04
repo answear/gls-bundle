@@ -6,12 +6,10 @@ namespace Answear\GlsBundle\Service;
 
 use Answear\GlsBundle\Client\Client;
 use Answear\GlsBundle\ConfigProvider;
-use Answear\GlsBundle\Enum\ParcelShopAction;
 use Answear\GlsBundle\Exception\ServiceUnavailableException;
 use Answear\GlsBundle\Request\GetParcelShops;
-use Answear\GlsBundle\Response\DTO\Openings;
 use Answear\GlsBundle\Response\DTO\ParcelShop;
-use Answear\GlsBundle\Response\DTO\RawParcelShop;
+use Answear\GlsBundle\Response\DTO\RawResponse;
 use Answear\GlsBundle\Serializer\Serializer;
 
 class ParcelShopsService
@@ -30,82 +28,22 @@ class ParcelShopsService
     /**
      * @return ParcelShop[]
      *
-     * @throws ServiceUnavailableException
+     * @throws ServiceUnavailableException|\Throwable
      */
-    public function getParcelShopCollection(
-        ?bool $withPclShopIn = true,
-        ?bool $withParcelLockIn = true,
-        ?string $senderId = null,
-        ?bool $codHandler = null,
-        ?bool $dropOff = null
-    ): array {
-        $rawParcelShopCollection = $this->getList(
-            $withPclShopIn,
-            $withParcelLockIn,
-            $senderId,
-            $codHandler,
-            $dropOff
-        );
+    public function getParcelShopCollection(): array
+    {
+        $request = new GetParcelShops($this->configProvider->getCountryCode());
+
+        $response = $this->client->request($request);
+
+        /** @var RawResponse $rawResponse */
+        $rawResponse = $this->serializer->decodeResponse(sprintf('%s', RawResponse::class), $response);
 
         $parcelShopCollection = [];
-        foreach ($rawParcelShopCollection as $rawParcelShop) {
-            try {
-                $openings = $this->getOpenings($rawParcelShop->pclshopid);
-            } catch (\Throwable $throwable) {
-                $openings = [];
-            }
-
-            $parcelShop = ParcelShop::fromRawParcelShop($rawParcelShop, $openings);
-            $parcelShopCollection[] = $parcelShop;
+        foreach ($rawResponse->items as $rawParcelShop) {
+            $parcelShopCollection[] = ParcelShop::fromRawParcelShop($rawParcelShop);
         }
 
         return $parcelShopCollection;
-    }
-
-    /**
-     * @return RawParcelShop[]
-     *
-     * @throws ServiceUnavailableException
-     */
-    public function getList(
-        ?bool $withPclShopIn = null,
-        ?bool $withParcelLockIn = null,
-        ?string $senderId = null,
-        ?bool $codHandler = null,
-        ?bool $dropOff = null
-    ): array {
-        $request = new GetParcelShops(
-            ParcelShopAction::getList(),
-            $this->configProvider->getCountryCode(),
-            $senderId,
-            $withPclShopIn,
-            $withParcelLockIn,
-            $codHandler,
-            $dropOff
-        );
-
-        $response = $this->client->request($request);
-
-        return $this->serializer->decodeResponse(sprintf('%s[]', RawParcelShop::class), $response);
-    }
-
-    /**
-     * @return Openings[]
-     */
-    public function getOpenings(string $shopId): array
-    {
-        $request = new GetParcelShops(
-            ParcelShopAction::getOpenings(),
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            $shopId
-        );
-        $response = $this->client->request($request);
-
-        return $this->serializer->decodeResponse(sprintf('%s[]', Openings::class), $response);
     }
 }

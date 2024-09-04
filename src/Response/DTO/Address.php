@@ -6,68 +6,29 @@ namespace Answear\GlsBundle\Response\DTO;
 
 class Address
 {
-    private string $zipCode;
-    private string $city;
-    private string $place;
-    private ?string $contact;
-    private ?string $phone;
-    private ?string $email;
-
     public function __construct(
-        string $zipCode,
-        string $city,
-        string $place,
-        ?string $contact,
-        ?string $phone,
-        ?string $email
+        public string $countryCode,
+        public string $zipCode,
+        public string $city,
+        public string $place,
+        public ?string $name,
+        public ?string $phone,
+        public ?string $email,
+        public ?string $web,
     ) {
-        $this->zipCode = $zipCode;
-        $this->city = $city;
-        $this->place = $place;
-        $this->contact = $contact;
-        $this->phone = $phone;
-        $this->email = $email;
     }
 
-    public static function fromRawParcelShop(RawParcelShop $rawParcelShop): self
+    public static function fromResponse(array $response): self
     {
         return new self(
-            $rawParcelShop->zipcode,
-            $rawParcelShop->city,
-            $rawParcelShop->address,
-            $rawParcelShop->contact,
-            $rawParcelShop->phone,
-            $rawParcelShop->email
+            $response['countryCode'],
+            $response['postalCode'],
+            $response['city'],
+            $response['address'],
+            $response['name'] ?? null,
+            $response['phone'] ?? null,
+            $response['email'] ?? null,
+            $response['web'] ?? null,
         );
-    }
-
-    public function getZipCode(): string
-    {
-        return $this->zipCode;
-    }
-
-    public function getCity(): string
-    {
-        return $this->city;
-    }
-
-    public function getPlace(): string
-    {
-        return $this->place;
-    }
-
-    public function getContact(): ?string
-    {
-        return $this->contact;
-    }
-
-    public function getPhone(): ?string
-    {
-        return $this->phone;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
     }
 }

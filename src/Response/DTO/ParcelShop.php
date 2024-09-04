@@ -4,178 +4,61 @@ declare(strict_types=1);
 
 namespace Answear\GlsBundle\Response\DTO;
 
-use Answear\GlsBundle\Enum\CountryCode;
-use Answear\GlsBundle\Util\BooleanTransformer;
+use Answear\GlsBundle\Enum\CountryCodeEnum;
+use Answear\GlsBundle\Enum\FeatureEnum;
+use Answear\GlsBundle\Enum\ParcelShopTypeEnum;
 
 class ParcelShop
 {
-    private string $shopId;
-    private string $name;
-    private CountryCode $countryCode;
-    private bool $codHandler;
-    private bool $payByBankCard;
-    private bool $dropOffPoint;
-    private string $owner;
-    private bool $parcelLocker;
-    private ?string $vendorUrl;
-    private ?string $pickupTime;
-    private ?string $info;
-    private Address $address;
-    /**
-     * @var Openings[]
-     */
-    private array $openings = [];
-    private ?Coordinates $coordinates;
-    private ?string $holidayStarts;
-    private ?string $holidayEnds;
-
-    public function __construct(
-        string $shopId,
-        string $name,
-        CountryCode $countryCode,
-        bool $isCodHandler,
-        bool $payByBankCard,
-        bool $dropOffPoint,
-        string $owner,
-        bool $isParcelLocker,
-        ?string $vendorUrl,
-        ?string $pickupTime,
-        ?string $info,
-        Address $address,
-        array $openings,
-        ?Coordinates $coordinates,
-        ?string $holidayStarts,
-        ?string $holidayEnds
-    ) {
-        $this->shopId = $shopId;
-        $this->name = $name;
-        $this->countryCode = $countryCode;
-        $this->codHandler = $isCodHandler;
-        $this->payByBankCard = $payByBankCard;
-        $this->dropOffPoint = $dropOffPoint;
-        $this->owner = $owner;
-        $this->parcelLocker = $isParcelLocker;
-        $this->vendorUrl = $vendorUrl;
-        $this->pickupTime = $pickupTime;
-        $this->info = $info;
-        $this->address = $address;
-        $this->openings = $openings;
-        $this->coordinates = $coordinates;
-        $this->holidayStarts = $holidayStarts;
-        $this->holidayEnds = $holidayEnds;
-    }
-
     /**
      * @param Openings[] $openings
      */
-    public static function fromRawParcelShop(RawParcelShop $rawParcelShop, array $openings): self
-    {
-        $coordinates = null;
+    public function __construct(
+        public string $shopId,
+        public string $name,
+        public CountryCodeEnum $countryCode,
+        public bool $isCodHandler,
+        public bool $payByBankCard,
+        public bool $isParcelLocker,
+        public ?string $pickupTime,
+        public ?string $info,
+        public Address $address,
+        public array $openings,
+        public Coordinates $coordinates,
+        public array $features,
+    ) {
+    }
 
-        if (null !== $rawParcelShop->geolat && null !== $rawParcelShop->geolng) {
-            $coordinates = new Coordinates((float) $rawParcelShop->geolat, (float) $rawParcelShop->geolng);
-        }
+    public static function fromRawParcelShop(RawParcelShop $rawParcelShop): self
+    {
+        $isCodHandler = in_array(FeatureEnum::AcceptsCash->value, $rawParcelShop->features, true);
+        $canPayByBankCard = in_array(FeatureEnum::AcceptsCard->value, $rawParcelShop->features, true);
+        $isParcelLocker = $rawParcelShop->type === ParcelShopTypeEnum::ParcelLocker->value;
+        $contact = Address::fromResponse($rawParcelShop->contact);
+        $coordinates = Coordinates::fromResponse($rawParcelShop->location);
+        $openings = array_map(
+            static fn(array $openings) => Openings::fromResponse($openings),
+            $rawParcelShop->hours,
+        );
+        $countryCode = CountryCodeEnum::from($contact->countryCode);
+        $features = array_map(
+            static fn(string $feature) => FeatureEnum::tryFrom($feature),
+            $rawParcelShop->features,
+        );
 
         return new self(
-            $rawParcelShop->pclshopid,
+            $rawParcelShop->id,
             $rawParcelShop->name,
-            CountryCode::byValue($rawParcelShop->ctrcode),
-            null === $rawParcelShop->iscodhandler ? false : BooleanTransformer::transformToBoolean($rawParcelShop->iscodhandler),
-            null === $rawParcelShop->paybybankcard ? false : BooleanTransformer::transformToBoolean($rawParcelShop->paybybankcard),
-            null === $rawParcelShop->dropoffpoint ? false : BooleanTransformer::transformToBoolean($rawParcelShop->dropoffpoint),
-            $rawParcelShop->owner,
-            null === $rawParcelShop->isparcellocker ? false : BooleanTransformer::transformToBoolean($rawParcelShop->isparcellocker),
-            $rawParcelShop->vendor_url,
-            $rawParcelShop->pcl_pickup_time,
-            $rawParcelShop->info,
-            Address::fromRawParcelShop($rawParcelShop),
+            $countryCode,
+            $isCodHandler,
+            $canPayByBankCard,
+            $isParcelLocker,
+            $rawParcelShop->pickupTime,
+            $rawParcelShop->description,
+            $contact,
             $openings,
             $coordinates,
-            $rawParcelShop->holidaystarts,
-            $rawParcelShop->holidayends
+            array_filter($features),
         );
-    }
-
-    public function getShopId(): string
-    {
-        return $this->shopId;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function getCountryCode(): CountryCode
-    {
-        return $this->countryCode;
-    }
-
-    public function isCodHandler(): bool
-    {
-        return $this->codHandler;
-    }
-
-    public function hasPayByBankCard(): bool
-    {
-        return $this->payByBankCard;
-    }
-
-    public function isDropOffPoint(): bool
-    {
-        return $this->dropOffPoint;
-    }
-
-    public function getOwner(): string
-    {
-        return $this->owner;
-    }
-
-    public function isParcelLocker(): bool
-    {
-        return $this->parcelLocker;
-    }
-
-    public function getVendorUrl(): ?string
-    {
-        return $this->vendorUrl;
-    }
-
-    public function getPickupTime(): ?string
-    {
-        return $this->pickupTime;
-    }
-
-    public function getInfo(): ?string
-    {
-        return $this->info;
-    }
-
-    public function getAddress(): Address
-    {
-        return $this->address;
-    }
-
-    /**
-     * @return Openings[]
-     */
-    public function getOpenings(): array
-    {
-        return $this->openings;
-    }
-
-    public function getCoordinates(): ?Coordinates
-    {
-        return $this->coordinates;
-    }
-
-    public function getHolidayStarts(): ?string
-    {
-        return $this->holidayStarts;
-    }
-
-    public function getHolidayEnds(): ?string
-    {
-        return $this->holidayEnds;
     }
 }

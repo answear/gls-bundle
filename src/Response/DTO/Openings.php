@@ -4,36 +4,30 @@ declare(strict_types=1);
 
 namespace Answear\GlsBundle\Response\DTO;
 
-use Answear\GlsBundle\Enum\DayType;
+use Answear\GlsBundle\Enum\DayTypeEnum;
 
 class Openings
 {
-    private DayType $day;
-    private string $open;
-    private string $midbreak;
+    public DayTypeEnum $day;
 
     public function __construct(
-        DayType $day,
-        string $open,
-        string $midbreak
+        public int $number,
+        public string $openTime,
+        public string $closeTime,
+        public ?string $breakStart = null,
+        public ?string $breakEnd = null,
     ) {
-        $this->day = $day;
-        $this->open = $open;
-        $this->midbreak = $midbreak;
+        $this->day = DayTypeEnum::getDayByNumber($number);
     }
 
-    public function getDay(): DayType
+    public static function fromResponse(array $responseHours): self
     {
-        return $this->day;
-    }
-
-    public function getOpen(): string
-    {
-        return $this->open;
-    }
-
-    public function getMidbreak(): string
-    {
-        return $this->midbreak;
+        return new self(
+            (int) $responseHours[0],
+            $responseHours[1],
+            $responseHours[2],
+            $responseHours[3] ?? null,
+            $responseHours[4] ?? null
+        );
     }
 }

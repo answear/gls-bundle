@@ -17,7 +17,7 @@ class RequestTransformer
 
     public function __construct(
         Serializer $serializer,
-        ConfigProvider $configuration
+        ConfigProvider $configuration,
     ) {
         $this->serializer = $serializer;
         $this->configuration = $configuration;
@@ -26,10 +26,6 @@ class RequestTransformer
     public function transform(RequestInterface $request): HttpRequest
     {
         $uri = $this->configuration->getUrl() . $request->getEndpoint();
-
-        if (null !== $request->getUrlQuery()) {
-            $uri .= '?' . $request->getUrlQuery();
-        }
 
         return new HttpRequest(
             $request->getMethod(),
