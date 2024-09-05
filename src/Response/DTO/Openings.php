@@ -6,7 +6,7 @@ namespace Answear\GlsBundle\Response\DTO;
 
 use Answear\GlsBundle\Enum\DayTypeEnum;
 
-class Openings
+readonly class Openings
 {
     public DayTypeEnum $day;
 

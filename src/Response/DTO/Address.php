@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Answear\GlsBundle\Response\DTO;
 
-class Address
+readonly class Address
 {
     public function __construct(
         public string $countryCode,

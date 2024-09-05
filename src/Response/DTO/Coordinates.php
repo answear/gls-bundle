@@ -6,7 +6,7 @@ namespace Answear\GlsBundle\Response\DTO;
 
 use Webmozart\Assert\Assert;
 
-class Coordinates
+readonly class Coordinates
 {
     public function __construct(
         public float $latitude,

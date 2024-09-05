@@ -8,6 +8,15 @@ use Answear\GlsBundle\Enum\CountryCodeEnum;
 
 class ConfigProvider
 {
+    public const URL_MAP = [
+        CountryCodeEnum::Romania->value => 'https://map.gls-hungary.com/',
+        CountryCodeEnum::Hungary->value => 'https://map.gls-hungary.com/',
+        CountryCodeEnum::Slovakia->value => 'https://map.gls-slovakia.com/',
+        CountryCodeEnum::Czech->value => 'https://map.gls-czech.com/',
+        CountryCodeEnum::Slovenia->value => 'https://map.gls-slovenia.com/',
+        CountryCodeEnum::Croatia->value => 'https://map.gls-croatia.com/',
+    ];
+
     private CountryCodeEnum $countryCode;
 
     public function __construct(string $countryCode)
@@ -22,13 +31,6 @@ class ConfigProvider
 
     public function getUrl(): string
     {
-        return match ($this->getCountryCode()) {
-            CountryCodeEnum::Romania,
-            CountryCodeEnum::Hungary => 'https://map.gls-hungary.com/',
-            CountryCodeEnum::Slovakia => 'https://map.gls-slovakia.com/',
-            CountryCodeEnum::Czech => 'https://map.gls-czech.com/',
-            CountryCodeEnum::Slovenia => 'https://map.gls-slovenia.com/',
-            CountryCodeEnum::Croatia => 'https://map.gls-croatia.com/',
-        };
+        return self::URL_MAP[$this->countryCode->value];
     }
 }
