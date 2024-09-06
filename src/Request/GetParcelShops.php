@@ -27,13 +27,6 @@ class GetParcelShops implements RequestInterface
 
     private function getJsonFile(): string
     {
-        return match ($this->countryCode) {
-            CountryCodeEnum::Hungary => 'hu.json',
-            CountryCodeEnum::Slovakia => 'sk.json',
-            CountryCodeEnum::Czech => 'cz.json',
-            CountryCodeEnum::Romania => 'ro.json',
-            CountryCodeEnum::Slovenia => 'si.json',
-            CountryCodeEnum::Croatia => 'hr.json',
-        };
+        return sprintf('%s.json', strtolower($this->countryCode->value));
     }
 }

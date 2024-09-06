@@ -31,16 +31,11 @@ class ParcelShop
 
     public static function fromRawParcelShop(RawParcelShop $rawParcelShop): self
     {
-        $isCodHandler = in_array(FeatureEnum::AcceptsCash->value, $rawParcelShop->features, true);
-        $canPayByBankCard = in_array(FeatureEnum::AcceptsCard->value, $rawParcelShop->features, true);
-        $isParcelLocker = $rawParcelShop->type === ParcelShopTypeEnum::ParcelLocker->value;
         $contact = Address::fromResponse($rawParcelShop->contact);
-        $coordinates = Coordinates::fromResponse($rawParcelShop->location);
         $openings = array_map(
             static fn(array $openings) => Openings::fromResponse($openings),
             $rawParcelShop->hours,
         );
-        $countryCode = CountryCodeEnum::from($contact->countryCode);
         $features = array_map(
             static fn(string $feature) => FeatureEnum::tryFrom($feature),
             $rawParcelShop->features,
@@ -49,15 +44,15 @@ class ParcelShop
         return new self(
             $rawParcelShop->id,
             $rawParcelShop->name,
-            $countryCode,
-            $isCodHandler,
-            $canPayByBankCard,
-            $isParcelLocker,
+            CountryCodeEnum::from($contact->countryCode),
+            in_array(FeatureEnum::AcceptsCash->value, $rawParcelShop->features, true),
+            in_array(FeatureEnum::AcceptsCard->value, $rawParcelShop->features, true),
+            $rawParcelShop->type === ParcelShopTypeEnum::ParcelLocker->value,
             $rawParcelShop->pickupTime,
             $rawParcelShop->description,
             $contact,
             $openings,
-            $coordinates,
+            Coordinates::fromResponse($rawParcelShop->location),
             array_filter($features),
         );
     }
