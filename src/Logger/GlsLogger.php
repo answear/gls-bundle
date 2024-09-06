@@ -89,7 +89,7 @@ class GlsLogger
 
     private function decorateMessage(string $message, ?UriInterface $uri): string
     {
-        return self::MESSAGE_PREFIX . $message . ' - ' . (null !== $uri ? $uri->getPath() . '?' . $uri->getQuery() : '');
+        return self::MESSAGE_PREFIX . $message . ' - ' . $uri?->getPath();
     }
 
     private function getParsedContent(string $content)

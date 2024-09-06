@@ -5,63 +5,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
         "pickupTime": "10:00",
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "ZALO\u0160KA CESTA 60A",
-            "contact": null,
             "phone": "01 54 21 140",
-            "email": null
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0559,
             "longitude": 14.5389
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL20",
@@ -69,191 +90,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
         "pickupTime": "10:00",
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "CESTA DVEH CESARJEV 71",
-            "contact": null,
-            "phone": "01 42 36 530",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0291,
             "longitude": 14.4817
         },
-        "holidayStarts": null,
-        "holidayEnds": null
-    },
-    {
-        "shopId": "1000-DELO06",
-        "name": "DELO PRODAJA , D.D.",
-        "countryCode": "SI",
-        "isCodHandler": true,
-        "payByBankCard": false,
-        "dropOffPoint": false,
-        "owner": "GLS",
-        "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
-        "info": null,
-        "address": {
-            "zipCode": "1000",
-            "city": "Ljubljana",
-            "place": "Dunajska 107",
-            "contact": null,
-            "phone": null,
-            "email": null
-        },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
-        "coordinates": {
-            "latitude": 46.0744,
-            "longitude": 14.5109
-        },
-        "holidayStarts": null,
-        "holidayEnds": null
-    },
-    {
-        "shopId": "1000-NOGROUPGRP",
-        "name": "TEST PS",
-        "countryCode": "SI",
-        "isCodHandler": true,
-        "payByBankCard": true,
-        "dropOffPoint": false,
-        "owner": "GLS",
-        "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
-        "info": null,
-        "address": {
-            "zipCode": "1000",
-            "city": "LJUBLJANA",
-            "place": "Cesta v Prod 84",
-            "contact": "TT",
-            "phone": "015001150",
-            "email": "it@gls-slovenia.com"
-        },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
-        "coordinates": {
-            "latitude": 46.0739,
-            "longitude": 14.6088
-        },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL27",
@@ -261,191 +175,169 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
         "pickupTime": "10:00",
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "BARJANSKA CESTA 90",
-            "contact": null,
             "phone": null,
-            "email": null
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "21:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "21:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.034,
             "longitude": 14.5002
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PARCELLOCK16",
         "name": "PAKETOMAT BS Petrol Trnovo",
         "countryCode": "SI",
-        "isCodHandler": true,
+        "isCodHandler": false,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": true,
-        "vendorUrl": null,
         "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "Riharjeva ulica 31, Petrol",
-            "contact": null,
-            "phone": "01 500 11 50",
-            "email": "info@gls-slovenia.com"
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0392,
             "longitude": 14.5
         },
-        "holidayStarts": null,
-        "holidayEnds": null
-    },
-    {
-        "shopId": "1000-PETROL01",
-        "name": "Testna paketna trgovina",
-        "countryCode": "SI",
-        "isCodHandler": true,
-        "payByBankCard": true,
-        "dropOffPoint": false,
-        "owner": "GLS",
-        "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "11:00",
-        "info": null,
-        "address": {
-            "zipCode": "1000",
-            "city": "LJUBLJANA",
-            "place": "Samo za namen testranja",
-            "contact": "NI AKTIVEN",
-            "phone": null,
-            "email": null
-        },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
-        "coordinates": {
-            "latitude": 46.0569,
-            "longitude": 14.5058
-        },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCard",
+            "pickup",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL26",
@@ -453,63 +345,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "KAJUHOVA ULICA 32S",
-            "contact": null,
-            "phone": "01 54 43 961",
-            "email": null
+            "phone": null,
+            "email": "kajuhova@kajuhova.com",
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "08:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0615,
             "longitude": 14.5382
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL23",
@@ -517,63 +430,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "\u0160TAJERSKA CESTA 10",
-            "contact": null,
-            "phone": "01 56 35 610",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "23:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "23:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "23:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "23:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "23:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "23:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "08:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.1058,
             "longitude": 14.5451
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL05",
@@ -581,63 +515,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "DUNAJSKA CESTA 130",
-            "contact": null,
-            "phone": "01 56 53 490",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0781,
             "longitude": 14.5126
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL21",
@@ -645,63 +600,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "CESTA DVEH CESARJEV 73",
-            "contact": null,
-            "phone": "01 42 36 540",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0288,
             "longitude": 14.4784
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL19",
@@ -709,63 +685,76 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "DOLENJSKA CESTA 242F",
-            "contact": null,
-            "phone": "01 42 12 670",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "19:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0197,
             "longitude": 14.5423
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL18",
@@ -773,63 +762,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
         "pickupTime": "10:00",
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "DUNAJSKA CESTA 70",
-            "contact": null,
-            "phone": "01 43 64 770",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "07:00",
+                "closeTime": "22:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.069,
             "longitude": 14.511
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-TRAFIKADVA10",
@@ -837,191 +847,185 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": false,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
         "pickupTime": "10:00",
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "Ajdov\u0161\u010dina 1 - PODHOD",
-            "contact": null,
-            "phone": "051 282-735",
-            "email": "703401@trafika3dva.si"
+            "phone": null,
+            "email": null,
+            "web": null
         },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
+        "openings": [],
         "coordinates": {
             "latitude": 46.0538,
             "longitude": 14.5046
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "1000-PETROL17",
         "name": "BS LJUBLJANA - TRNOVO",
         "countryCode": "SI",
-        "isCodHandler": true,
-        "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
+        "isCodHandler": false,
+        "payByBankCard": false,
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "1000",
             "city": "LJUBLJANA",
             "place": "RIHARJEVA ULICA 31",
-            "contact": null,
-            "phone": "01 42 92 380",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "20:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "13:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.0393,
             "longitude": 14.5
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": []
     },
     {
         "shopId": "6000-PARCELLOCK01",
         "name": "PAKETOMAT OMV BERTOKI",
         "countryCode": "SI",
-        "isCodHandler": true,
+        "isCodHandler": false,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": true,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "6000",
             "city": "Koper",
             "place": "Cesta med vinogradi 52",
-            "contact": null,
-            "phone": "01 500 11 50",
-            "email": "INFO@GLS-SLOVENIA.COM"
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 45.5554,
             "longitude": 13.7809
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCard",
+            "pickup",
+            "delivery"
+        ]
     },
     {
         "shopId": "9000-PETROL03",
@@ -1029,127 +1033,84 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "9000",
             "city": "MURSKA SOBOTA",
             "place": "PANONSKA ULICA 5",
-            "contact": null,
-            "phone": "02 522 10 05",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.6565,
             "longitude": 16.1714
         },
-        "holidayStarts": null,
-        "holidayEnds": null
-    },
-    {
-        "shopId": "9000-OMV",
-        "name": "OMV SLOVENIJA D.O.O.",
-        "countryCode": "SI",
-        "isCodHandler": true,
-        "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
-        "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
-        "info": null,
-        "address": {
-            "zipCode": "9000",
-            "city": "MURSKA SOBOTA",
-            "place": "Lendavska 60d",
-            "contact": null,
-            "phone": null,
-            "email": null
-        },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
-        "coordinates": {
-            "latitude": 46.6668,
-            "longitude": 16.177
-        },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "9000-TRAFIKADVA02",
@@ -1157,63 +1118,68 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": "10:00",
+        "pickupTime": null,
         "info": null,
         "address": {
             "zipCode": "9000",
             "city": "MURSKA SOBOTA",
             "place": "Kocljeva 3, Tr\u017enica",
-            "contact": null,
-            "phone": "051 282-634",
-            "email": "701201@trafika3dva.si"
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "19:30",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "19:30",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "19:30",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "19:30",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "06:00",
+                "closeTime": "19:30",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.6604,
             "longitude": 16.1644
         },
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     },
     {
         "shopId": "9000-PETROL02",
@@ -1221,251 +1187,83 @@
         "countryCode": "SI",
         "isCodHandler": true,
         "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
         "isParcelLocker": false,
-        "vendorUrl": null,
         "pickupTime": "10:00",
         "info": null,
         "address": {
             "zipCode": "9000",
             "city": "MURSKA SOBOTA",
             "place": "BAKOVSKA ULICA 51",
-            "contact": null,
-            "phone": "02 53 71 215",
-            "email": null
+            "phone": null,
+            "email": null,
+            "web": null
         },
         "openings": [
             {
+                "number": 1,
                 "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 2,
                 "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 3,
                 "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 4,
                 "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 5,
                 "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 6,
                 "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             },
             {
+                "number": 7,
                 "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
+                "openTime": "00:00",
+                "closeTime": "24:00",
+                "breakStart": null,
+                "breakEnd": null
             }
         ],
         "coordinates": {
             "latitude": 46.6345,
             "longitude": 16.1641
         },
-        "holidayStarts": null,
-        "holidayEnds": null
-    },
-    {
-        "shopId": "6000-OMV01",
-        "name": "OMV SLOVENIJA D.O.O.",
-        "countryCode": "SI",
-        "isCodHandler": true,
-        "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
-        "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": null,
-        "info": null,
-        "address": {
-            "zipCode": "6000",
-            "city": "KOPER",
-            "place": "Istrska cesta 53",
-            "contact": null,
-            "phone": null,
-            "email": null
-        },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
-        "coordinates": {
-            "latitude": 45.539,
-            "longitude": 13.7287
-        },
-        "holidayStarts": null,
-        "holidayEnds": null
-    },
-    {
-        "shopId": "6000-OMV01",
-        "name": "OMV SLOVENIJA D.O.O.",
-        "countryCode": "SI",
-        "isCodHandler": true,
-        "payByBankCard": true,
-        "dropOffPoint": true,
-        "owner": "GLS",
-        "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": null,
-        "info": null,
-        "address": {
-            "zipCode": "6000",
-            "city": "KOPER",
-            "place": "Istrska cesta 53",
-            "contact": null,
-            "phone": null,
-            "email": null
-        },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
-        "coordinates": {
-            "latitude": 45.539,
-            "longitude": 13.7287
-        },
-        "holidayStarts": null,
-        "holidayEnds": null
-    },
-    {
-        "shopId": "1000-OMV04",
-        "name": "PS OMV LJUBLJANA LITIJSKA",
-        "countryCode": "SI",
-        "isCodHandler": false,
-        "payByBankCard": false,
-        "dropOffPoint": false,
-        "owner": "GLS",
-        "isParcelLocker": false,
-        "vendorUrl": null,
-        "pickupTime": null,
-        "info": null,
-        "address": {
-            "zipCode": "1000",
-            "city": "LJUBLJANA",
-            "place": "Litijska cesta 40",
-            "contact": null,
-            "phone": null,
-            "email": null
-        },
-        "openings": [
-            {
-                "day": "monday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "tuesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "wednesday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "thursday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "friday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "saturday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            },
-            {
-                "day": "sunday",
-                "open": "00:00-24:00",
-                "midbreak": ""
-            }
-        ],
-        "coordinates": null,
-        "holidayStarts": null,
-        "holidayEnds": null
+        "features": [
+            "acceptsCash",
+            "acceptsCard",
+            "delivery"
+        ]
     }
 ]

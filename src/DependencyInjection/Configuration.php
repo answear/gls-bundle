@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Answear\GlsBundle\DependencyInjection;
 
-use Answear\GlsBundle\Enum\CountryCode;
+use Answear\GlsBundle\Enum\CountryCodeEnum;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -17,12 +17,23 @@ class Configuration implements ConfigurationInterface
         $treeBuilder->getRootNode()
             ->children()
                 ->enumNode('countryCode')
-                    ->values(CountryCode::getValues())
+                    ->values($this->getCountryCodes())
                     ->isRequired()
                 ->end()
                 ->scalarNode('logger')->defaultValue(null)->end()
             ->end();
 
         return $treeBuilder;
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getCountryCodes(): array
+    {
+        return array_map(
+            static fn(CountryCodeEnum $countryCode) => $countryCode->value,
+            CountryCodeEnum::cases(),
+        );
     }
 }
