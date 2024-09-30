@@ -8,21 +8,21 @@
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.5|^7.9.2",
         "psr/log": "^1.1.4",
-        "symfony/http-kernel": "6.4.*",
-        "symfony/property-access": "6.4.*",
-        "symfony/property-info": "6.4.*",
-        "symfony/serializer": "6.4.*",
+        "symfony/http-kernel": "^6.4|^7.0",
+        "symfony/property-access": "^6.4|^7.0",
+        "symfony/property-info": "^6.4|^7.0",
+        "symfony/serializer": "^6.4|^7.0",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.63.2",
+        "friendsofphp/php-cs-fixer": "^3.64",
         "matthiasnoback/symfony-config-test": "^5.2",
-        "phpro/grumphp": "^2.7.0",
+        "phpro/grumphp": "^2.8",
         "phpstan/phpstan": "^1.12",
-        "phpstan/phpstan-webmozart-assert": "^1.2.10",
-        "phpunit/phpunit": "^10.5.30",
+        "phpstan/phpstan-webmozart-assert": "^1.2",
+        "phpunit/phpunit": "^10.5",
         "roave/security-advisories": "dev-master",
-        "symfony/phpunit-bridge": "6.4.*"
+        "symfony/phpunit-bridge": "^6.4|^7.0"
     },
     "autoload": {
         "psr-4": {

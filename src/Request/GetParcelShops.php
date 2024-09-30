@@ -6,13 +6,14 @@ namespace Answear\GlsBundle\Request;
 
 use Answear\GlsBundle\Enum\CountryCodeEnum;
 
-class GetParcelShops implements RequestInterface
+readonly class GetParcelShops implements RequestInterface
 {
     private const ENDPOINT = 'data/deliveryPoints/';
     private const HTTP_METHOD = 'GET';
 
-    public function __construct(public CountryCodeEnum $countryCode)
-    {
+    public function __construct(
+        public CountryCodeEnum $countryCode,
+    ) {
     }
 
     public function getEndpoint(): string
