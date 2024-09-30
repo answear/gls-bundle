@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Answear\GlsBundle\Response\DTO;
 
-class RawParcelShop
+readonly class RawParcelShop
 {
     public function __construct(
         public string $id,

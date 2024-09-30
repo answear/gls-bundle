@@ -8,7 +8,7 @@ use Answear\GlsBundle\Enum\CountryCodeEnum;
 use Answear\GlsBundle\Enum\FeatureEnum;
 use Answear\GlsBundle\Enum\ParcelShopTypeEnum;
 
-class ParcelShop
+readonly class ParcelShop
 {
     /**
      * @param Openings[] $openings
