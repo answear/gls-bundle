@@ -7,7 +7,7 @@
         "php": ">=8.2",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.5|^7.9.2",
-        "psr/log": "^1.1.4",
+        "psr/log": "^1.1||^2.0||^3.0",
         "symfony/http-kernel": "^6.4|^7.0",
         "symfony/property-access": "^6.4|^7.0",
         "symfony/property-info": "^6.4|^7.0",
