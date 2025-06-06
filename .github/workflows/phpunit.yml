@@ -11,13 +11,10 @@ jobs:
         strategy:
             matrix:
                 php-version:
-                    - "8.3"
-                    - "8.2"
+                    - "8.4"
                 deps:
                     - "normal"
-                include:
-                    - deps: "low"
-                      php-version: "8.2"
+                    - "low"
 
         steps:
             - name: "Checkout"
@@ -31,7 +28,7 @@ jobs:
                   php-version: "${{ matrix.php-version }}"
 
             - name: "Cache dependencies installed with composer"
-              uses: "actions/cache@v2"
+              uses: "actions/cache@v4"
               with:
                   path: "~/.composer/cache"
                   key: "php-${{ matrix.php-version }}-composer-locked-${{ hashFiles('composer.lock') }}"
