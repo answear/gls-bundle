@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class AnswearGlsExtension extends Extension implements PrependExtensionInterface
 {
-    private ?Definition $loggerDefinition;
+    private Definition $loggerDefinition;
     private array $config;
 
     public function prepend(ContainerBuilder $container): void
