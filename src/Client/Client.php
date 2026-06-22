@@ -23,7 +23,7 @@ class Client
     public function __construct(
         RequestTransformer $transformer,
         GlsLogger $glsLogger,
-        ?ClientInterface $client = null
+        ?ClientInterface $client = null,
     ) {
         $this->transformer = $transformer;
         $this->glsLogger = $glsLogger;
