@@ -17,6 +17,15 @@ class ConfigProvider
         CountryCodeEnum::Croatia->value => 'https://map.gls-croatia.com/',
     ];
 
+    public const MYGLS_URL_MAP = [
+        CountryCodeEnum::Romania->value => 'https://api.mygls.ro/',
+        CountryCodeEnum::Hungary->value => 'https://api.mygls.hu/',
+        CountryCodeEnum::Slovakia->value => 'https://api.mygls.sk/',
+        CountryCodeEnum::Czech->value => 'https://api.mygls.cz/',
+        CountryCodeEnum::Slovenia->value => 'https://api.mygls.si/',
+        CountryCodeEnum::Croatia->value => 'https://api.mygls.hr/',
+    ];
+
     private CountryCodeEnum $countryCode;
     private ?string $username;
     private ?string $password;
@@ -61,6 +70,10 @@ class ConfigProvider
 
     public function getUrl(): string
     {
-        return $this->apiUrl ?? self::URL_MAP[$this->countryCode->value];
+        if ($this->isMyGlsEnabled()) {
+            return $this->apiUrl ?? self::MYGLS_URL_MAP[$this->countryCode->value];
+        }
+
+        return self::URL_MAP[$this->countryCode->value];
     }
 }

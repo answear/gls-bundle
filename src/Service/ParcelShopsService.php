@@ -97,10 +97,18 @@ class ParcelShopsService
             return [];
         }
 
-        $binary = \pack('C*', ...$myGlsResponse->Data);
+        $binary = '';
+        foreach (array_chunk($myGlsResponse->Data, 5000) as $chunk) {
+            $binary .= \pack('C*', ...$chunk);
+        }
         $decryptedAndDecompressed = \gzdecode($binary);
         if (false === $decryptedAndDecompressed) {
-            throw new \RuntimeException('Failed to decompress Slovakian GLS delivery points data.');
+            throw new \RuntimeException(
+                sprintf(
+                    'Failed to decompress GLS %s delivery points data.',
+                    $this->configProvider->getCountryCode()->value
+                )
+            );
         }
 
         /** @var array<string, mixed>[] $allPoints */
