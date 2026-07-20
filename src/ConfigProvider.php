@@ -18,10 +18,20 @@ class ConfigProvider
     ];
 
     private CountryCodeEnum $countryCode;
+    private ?string $username;
+    private ?string $password;
+    private ?string $apiUrl;
 
-    public function __construct(string $countryCode)
-    {
+    public function __construct(
+        string $countryCode,
+        ?string $username = null,
+        ?string $password = null,
+        ?string $apiUrl = null,
+    ) {
         $this->countryCode = CountryCodeEnum::from($countryCode);
+        $this->username = $username;
+        $this->password = $password;
+        $this->apiUrl = $apiUrl;
     }
 
     public function getCountryCode(): CountryCodeEnum
@@ -29,8 +39,28 @@ class ConfigProvider
         return $this->countryCode;
     }
 
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function getApiUrl(): ?string
+    {
+        return $this->apiUrl;
+    }
+
+    public function isMyGlsEnabled(): bool
+    {
+        return !empty($this->username) && !empty($this->password);
+    }
+
     public function getUrl(): string
     {
-        return self::URL_MAP[$this->countryCode->value];
+        return $this->apiUrl ?? self::URL_MAP[$this->countryCode->value];
     }
 }

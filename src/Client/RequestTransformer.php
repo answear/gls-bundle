@@ -25,7 +25,16 @@ class RequestTransformer
 
     public function transform(RequestInterface $request): HttpRequest
     {
-        $uri = $this->configuration->getUrl() . $request->getEndpoint();
+        $baseUrl = $this->configuration->getUrl();
+        $endpoint = $request->getEndpoint();
+
+        if (str_ends_with($baseUrl, $endpoint)) {
+            $uri = $baseUrl;
+        } elseif (str_contains($baseUrl, 'MasterDataService.svc/json/GetDeliveryPoints') && $request instanceof \Answear\GlsBundle\Request\GetDeliveryPoints) {
+            $uri = $baseUrl;
+        } else {
+            $uri = rtrim($baseUrl, '/') . '/' . ltrim($endpoint, '/');
+        }
 
         return new HttpRequest(
             $request->getMethod(),

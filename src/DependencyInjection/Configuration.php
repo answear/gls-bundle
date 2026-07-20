@@ -21,6 +21,9 @@ class Configuration implements ConfigurationInterface
                     ->isRequired()
                 ->end()
                 ->scalarNode('logger')->defaultValue(null)->end()
+                ->scalarNode('username')->defaultNull()->end()
+                ->scalarNode('password')->defaultNull()->end()
+                ->scalarNode('apiUrl')->defaultNull()->end()
             ->end();
 
         return $treeBuilder;
