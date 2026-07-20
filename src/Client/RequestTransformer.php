@@ -28,12 +28,13 @@ class RequestTransformer
         $baseUrl = $this->configuration->getUrl();
         $endpoint = $request->getEndpoint();
 
-        if (str_ends_with($baseUrl, $endpoint)) {
-            $uri = $baseUrl;
-        } elseif (str_contains($baseUrl, 'MasterDataService.svc/json/GetDeliveryPoints') && $request instanceof \Answear\GlsBundle\Request\GetDeliveryPoints) {
+        $normalizedBaseUrl = rtrim($baseUrl, '/');
+        $normalizedEndpoint = ltrim($endpoint, '/');
+
+        if (str_ends_with($normalizedBaseUrl, $normalizedEndpoint)) {
             $uri = $baseUrl;
         } else {
-            $uri = rtrim($baseUrl, '/') . '/' . ltrim($endpoint, '/');
+            $uri = $normalizedBaseUrl . '/' . $normalizedEndpoint;
         }
 
         return new HttpRequest(
