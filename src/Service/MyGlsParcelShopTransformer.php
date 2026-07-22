@@ -7,6 +7,7 @@ namespace Answear\GlsBundle\Service;
 use Answear\GlsBundle\Enum\CountryCodeEnum;
 use Answear\GlsBundle\Enum\FeatureEnum;
 use Answear\GlsBundle\Enum\MyGlsDeliveryPointTypeEnum;
+use Answear\GlsBundle\Logger\GlsLogger;
 use Answear\GlsBundle\Response\DTO\Address;
 use Answear\GlsBundle\Response\DTO\Coordinates;
 use Answear\GlsBundle\Response\DTO\Openings;
@@ -14,29 +15,40 @@ use Answear\GlsBundle\Response\DTO\ParcelShop;
 
 class MyGlsParcelShopTransformer
 {
+    private GlsLogger $logger;
+
+    public function __construct(?GlsLogger $logger = null)
+    {
+        $this->logger = $logger ?? new GlsLogger(null);
+    }
+
     public function transform(array $point, CountryCodeEnum $countryCode): ?ParcelShop
     {
-        if (false === ($point['IsActive'] ?? true)) {
+        if (true !== ($point['IsActive'] ?? false)) {
             return null;
         }
 
         $id = (string) ($point['Id'] ?? '');
         if ('' === $id) {
+            $this->logger->logWarning('MyGLS delivery point skipped: missing or empty Id.', ['point' => $point]);
+
             return null;
         }
 
         $addressData = $point['Address'] ?? [];
         if (!is_array($addressData)) {
+            $this->logger->logWarning('MyGLS delivery point skipped: missing or invalid Address data.', ['pointId' => $id]);
+
             return null;
         }
 
-        $address = $this->createAddress($addressData, $countryCode);
+        $address = $this->createAddress($addressData, $countryCode, $id);
         if (null === $address) {
             return null;
         }
 
         $openingList = $point['DeliveryPointOpeningList'] ?? [];
-        $openings = is_array($openingList) ? $this->createOpenings($openingList) : [];
+        $openings = is_array($openingList) ? $this->createOpenings($openingList, $id) : [];
 
         $cardPaymentAllowed = (bool) ($point['CardPaymentAllowed'] ?? false);
         $isCodHandler = (bool) ($point['CodHandler'] ?? false);
@@ -75,10 +87,12 @@ class MyGlsParcelShopTransformer
         );
     }
 
-    private function createAddress(array $addressData, CountryCodeEnum $countryCode): ?Address
+    private function createAddress(array $addressData, CountryCodeEnum $countryCode, string $pointId): ?Address
     {
         $city = (string) ($addressData['City'] ?? '');
         if ('' === $city) {
+            $this->logger->logWarning('MyGLS delivery point skipped: missing City.', ['pointId' => $pointId]);
+
             return null;
         }
 
@@ -99,7 +113,7 @@ class MyGlsParcelShopTransformer
     /**
      * @return Openings[]
      */
-    private function createOpenings(array $openingList): array
+    private function createOpenings(array $openingList, string $pointId): array
     {
         $openings = [];
         foreach ($openingList as $opening) {
@@ -109,11 +123,21 @@ class MyGlsParcelShopTransformer
 
             $dayOfWeek = (int) ($opening['DayOfWeek'] ?? 0);
             if ($dayOfWeek < 1 || $dayOfWeek > 7) {
+                $this->logger->logWarning(
+                    'MyGLS delivery point opening skipped: invalid DayOfWeek.',
+                    ['pointId' => $pointId, 'opening' => $opening]
+                );
+
                 continue;
             }
 
             $open = $opening['Open'] ?? '';
             if (!is_string($open) || '' === $open) {
+                $this->logger->logWarning(
+                    'MyGLS delivery point opening skipped: missing Open time.',
+                    ['pointId' => $pointId, 'opening' => $opening]
+                );
+
                 continue;
             }
 

@@ -7,6 +7,7 @@ namespace Answear\GlsBundle\Service;
 use Answear\GlsBundle\Client\Client;
 use Answear\GlsBundle\ConfigProvider;
 use Answear\GlsBundle\Exception\ServiceUnavailableException;
+use Answear\GlsBundle\Logger\GlsLogger;
 use Answear\GlsBundle\Request\GetDeliveryPoints;
 use Answear\GlsBundle\Request\GetParcelShops;
 use Answear\GlsBundle\Response\DTO\MyGlsResponse;
@@ -28,11 +29,12 @@ class ParcelShopsService
         Serializer $serializer,
         ConfigProvider $configProvider,
         ?MyGlsParcelShopTransformer $transformer = null,
+        ?GlsLogger $logger = null,
     ) {
         $this->client = $client;
         $this->serializer = $serializer;
         $this->configProvider = $configProvider;
-        $this->transformer = $transformer ?? new MyGlsParcelShopTransformer();
+        $this->transformer = $transformer ?? new MyGlsParcelShopTransformer($logger);
     }
 
     /**

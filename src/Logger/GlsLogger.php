@@ -77,6 +77,11 @@ class GlsLogger
         );
     }
 
+    public function logWarning(string $message, array $context = []): void
+    {
+        $this->logger->warning(self::MESSAGE_PREFIX . $message, $context);
+    }
+
     public function setRequestId(string $requestId): void
     {
         $this->requestId = $requestId;

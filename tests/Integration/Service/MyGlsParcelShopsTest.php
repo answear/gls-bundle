@@ -78,14 +78,11 @@ class MyGlsParcelShopsTest extends TestCase
 
         $jsonStr = json_encode($places, JSON_THROW_ON_ERROR);
         $compressed = gzencode($jsonStr);
-        if (false === $compressed) {
-            $this->fail('Failed to gzencode mock data');
-        }
+        $this->assertNotFalse($compressed, 'Failed to gzencode mock data');
 
         $unpack = unpack('C*', $compressed);
-        if (false === $unpack) {
-            $this->fail('Failed to unpack mock data');
-        }
+        $this->assertNotFalse($unpack, 'Failed to unpack mock data');
+
         $dataBytes = array_values($unpack);
 
         $apiResponse = [
