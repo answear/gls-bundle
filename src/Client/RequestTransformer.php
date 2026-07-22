@@ -32,7 +32,7 @@ class RequestTransformer
         $normalizedEndpoint = ltrim($endpoint, '/');
 
         if (str_ends_with($normalizedBaseUrl, $normalizedEndpoint)) {
-            $uri = $baseUrl;
+            $uri = $normalizedBaseUrl;
         } else {
             $uri = $normalizedBaseUrl . '/' . $normalizedEndpoint;
         }

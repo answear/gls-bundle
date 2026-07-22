@@ -51,6 +51,7 @@ class MyGlsParcelShopsTest extends TestCase
                 'Longitude' => 17.1077,
                 'IsActive' => true,
                 'CardPaymentAllowed' => true,
+                'CodHandler' => true,
                 'Address' => [
                     'Name' => 'New GLS SK ParcelShop',
                     'City' => 'Bratislava',
@@ -127,6 +128,47 @@ class MyGlsParcelShopsTest extends TestCase
 
         $this->assertContains(FeatureEnum::AcceptsCard, $shop->features);
         $this->assertContains(FeatureEnum::AcceptsCash, $shop->features);
+    }
+
+    #[Test]
+    public function getMyGlsParcelShopsThrowsExceptionOnApiError(): void
+    {
+        $apiResponse = [
+            'ErrorCode' => 100,
+            'ErrorDescription' => 'Invalid credentials',
+            'Data' => [],
+        ];
+
+        $this->client = $this->getClient();
+        $this->mockGuzzleResponse(
+            new Response(200, [], json_encode($apiResponse, JSON_THROW_ON_ERROR))
+        );
+
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('MyGLS API error: Invalid credentials (code: 100)');
+
+        $service = $this->getService();
+        $service->getParcelShopCollection();
+    }
+
+    #[Test]
+    public function getMyGlsParcelShopsReturnsEmptyArrayWhenDataIsEmpty(): void
+    {
+        $apiResponse = [
+            'ErrorCode' => 0,
+            'ErrorDescription' => '',
+            'Data' => [],
+        ];
+
+        $this->client = $this->getClient();
+        $this->mockGuzzleResponse(
+            new Response(200, [], json_encode($apiResponse, JSON_THROW_ON_ERROR))
+        );
+
+        $service = $this->getService();
+        $collection = $service->getParcelShopCollection();
+
+        $this->assertEmpty($collection);
     }
 
     private function getClient(): Client

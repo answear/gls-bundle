@@ -17,7 +17,7 @@ class ConfigProvider
         CountryCodeEnum::Croatia->value => 'https://map.gls-croatia.com/',
     ];
 
-    public const MYGLS_URL_MAP = [
+    private const MYGLS_URL_MAP = [
         CountryCodeEnum::Romania->value => 'https://api.mygls.ro/',
         CountryCodeEnum::Hungary->value => 'https://api.mygls.hu/',
         CountryCodeEnum::Slovakia->value => 'https://api.mygls.sk/',

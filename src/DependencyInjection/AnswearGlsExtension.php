@@ -41,12 +41,14 @@ class AnswearGlsExtension extends Extension implements PrependExtensionInterface
     private function setConfigProvider(ContainerBuilder $container, array $config): void
     {
         $definition = $container->getDefinition(ConfigProvider::class);
-        $definition->setArguments([
-            $config['countryCode'],
-            $config['username'] ?? null,
-            $config['password'] ?? null,
-            $config['apiUrl'] ?? null,
-        ]);
+        $definition->setArguments(
+            [
+                $config['countryCode'],
+                $config['username'] ?? null,
+                $config['password'] ?? null,
+                $config['apiUrl'] ?? null,
+            ]
+        );
     }
 
     private function setLogger(ContainerBuilder $container): void
