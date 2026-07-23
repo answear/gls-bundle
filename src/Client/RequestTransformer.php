@@ -25,7 +25,17 @@ class RequestTransformer
 
     public function transform(RequestInterface $request): HttpRequest
     {
-        $uri = $this->configuration->getUrl() . $request->getEndpoint();
+        $baseUrl = $this->configuration->getUrl();
+        $endpoint = $request->getEndpoint();
+
+        $normalizedBaseUrl = rtrim($baseUrl, '/');
+        $normalizedEndpoint = ltrim($endpoint, '/');
+
+        if (str_ends_with($normalizedBaseUrl, $normalizedEndpoint)) {
+            $uri = $normalizedBaseUrl;
+        } else {
+            $uri = $normalizedBaseUrl . '/' . $normalizedEndpoint;
+        }
 
         return new HttpRequest(
             $request->getMethod(),
